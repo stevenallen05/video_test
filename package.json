@@ -1,25 +1,60 @@
 {
-  "name": "webpack-starter-template",
-  "version": "0.1.0",
-  "description": "Webpack starter template",
+  "name": "typescript-vue-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "WEBPACK_ENV=dev webpack-dev-server",
-    "start": "http-server --port ${PORT:-8080} build",
-    "prestart": "npm run build",
-    "build": "mkdir -p build && WEBPACK_ENV=production webpack && ncp src/static/ build/"
+    "build": "webpack",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Daniel Rosenwasser",
+    "url": "https://github.com/DanielRosenwasser"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "vue": "^2.5.2",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^6.0.0",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.1.0",
-    "babel-loader": "^5.3.2",
-    "css-loader": "^0.18.0",
-    "exports-loader": "^0.6.2",
-    "extract-text-webpack-plugin": "^0.8.2",
-    "http-server": "^0.8.5",
-    "less-loader": "^2.2.0",
-    "ncp": "^2.0.0",
-    "source-map-loader": "^0.1.5",
-    "style-loader": "^0.12.3",
-    "webpack": "^1.12.1",
-    "webpack-dev-server": "^1.10.1"
+    "@types/jest": "^23.3.2",
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "css-loader": "^0.28.1",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.3",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.7.2",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^12.0.3",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^2.5.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "vue"
+    ],
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/node_modules"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      ".*\\.(ts)$": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "globals": {
+      "vue-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
   }
 }
