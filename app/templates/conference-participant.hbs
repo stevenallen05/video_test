@@ -5,6 +5,10 @@
       border: none;
     }
   
+    #twilio-auth-token {
+      display: none;
+    }
+
     #local-media {
       position: absolute;
       width: 16em;
@@ -14,7 +18,7 @@
     }
 </style>
 
-{{model.identityToken}}
+<div id="twilio-auth-token">{{model.identityToken}}</div>
 
 <div class="container">
   <div class="row">
