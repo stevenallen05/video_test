@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('video-conferences');
+  this.route('video_conferences');
 });
 
 export default Router;
