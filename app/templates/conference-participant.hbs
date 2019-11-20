@@ -1,0 +1,27 @@
+<style>
+    div#local-media video {
+      max-width: 100%;
+      max-height: 100%;
+      border: none;
+    }
+  
+    #local-media {
+      position: absolute;
+      width: 16em;
+      bottom: 10px;
+      right: 10px;
+      height: 9em;
+    }
+</style>
+
+{{model.identityToken}}
+
+<div class="container">
+  <div class="row">
+
+  </div>
+  <a id="btnDisconnect" class="waves-effect waves-light btn">Disconnect</a>
+
+  <div id="remote-media"></div>
+</div>
+<div id="local-media" class="floating-bottom-right"></div>
